@@ -1,0 +1,460 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background: #fafafa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+#root {
+    width: 100%;
+    max-width: 350px;
+}
+
+.auth-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid #dbdbdb;
+    border-radius: 1px;
+    padding: 30px 40px 20px;
+    width: 100%;
+}
+
+/* Instagram Logo */
+.logo {
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: 'Billabong', 'Segoe UI', cursive;
+    font-size: 2.8rem;
+    font-weight: 400;
+    color: #262626;
+    letter-spacing: -2px;
+}
+
+.logo i {
+    color: #262626;
+    margin-right: 4px;
+    font-size: 2.6rem;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 6px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 9px 8px;
+    background: #fafafa;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    outline: none;
+    transition: border 0.1s ease;
+}
+
+.form-group input:focus {
+    border-color: #a8a8a8;
+    background: #fafafa;
+}
+
+.form-group input::placeholder {
+    color: #8e8e8e;
+    font-weight: 300;
+    font-size: 0.75rem;
+}
+
+/* Login Button */
+.btn {
+    width: 100%;
+    padding: 7px 0;
+    margin-top: 8px;
+    background: #0095f6;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: background 0.15s ease;
+}
+
+.btn:hover {
+    background: #1877f2;
+}
+
+.btn:disabled {
+    opacity: 0.7;
+    cursor: default;
+    background: #0095f6;
+}
+
+/* Forgot Password */
+.forgot-password {
+    text-align: center;
+    margin-top: 14px;
+}
+
+.forgot-password a {
+    color: #00376b;
+    font-size: 0.75rem;
+    text-decoration: none;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+/* Divider */
+.divider {
+    display: flex;
+    align-items: center;
+    margin: 14px 0;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.divider span {
+    color: #8e8e8e;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0 18px;
+    text-transform: uppercase;
+}
+
+/* Facebook Login */
+.facebook-login {
+    width: 100%;
+    padding: 7px 0;
+    background: transparent;
+    border: none;
+    color: #385185;
+    font-weight: 600;
+    font-size: 0.875rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.facebook-login i {
+    font-size: 1.2rem;
+}
+
+.facebook-login:hover {
+    color: #1e3a6f;
+}
+
+.facebook-login:disabled {
+    opacity: 0.6;
+    cursor: default;
+}
+
+/* Toggle Mode */
+.toggle-mode {
+    text-align: center;
+    margin-top: 18px;
+    padding-top: 18px;
+    border-top: 1px solid #dbdbdb;
+    font-size: 0.875rem;
+    color: #262626;
+}
+
+.toggle-mode span {
+    color: #0095f6;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.toggle-mode span:hover {
+    color: #00376b;
+}
+
+/* Error Box */
+.error-box {
+    background: #fde0e0;
+    border: 1px solid #f5c6c6;
+    border-radius: 4px;
+    padding: 8px 12px;
+    margin: 6px 0 10px;
+    font-size: 0.8rem;
+    color: #c03434;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.error-box i {
+    font-size: 1rem;
+}
+
+/* Success Response */
+.mock-response {
+    background: #f8f8f8;
+    border-radius: 4px;
+    padding: 8px 12px;
+    margin-top: 12px;
+    font-size: 0.8rem;
+    color: #2c3e50;
+    border-left: 3px solid #0095f6;
+    word-break: break-all;
+    white-space: pre-wrap;
+}
+
+.mock-response strong {
+    color: #1e293b;
+}
+
+/* View Users Button */
+.view-users-btn {
+    background: #efefef;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    color: #262626;
+    transition: background 0.2s;
+    width: 100%;
+    margin-top: 8px;
+}
+
+.view-users-btn:hover {
+    background: #dbdbdb;
+}
+
+/* API Status */
+.api-status {
+    text-align: center;
+    font-size: 0.7rem;
+    color: #8e8e8e;
+    margin-top: 16px;
+    padding-top: 12px;
+    border-top: 1px solid #efefef;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.api-status .badge {
+    background: #efefef;
+    padding: 2px 10px;
+    border-radius: 30px;
+    font-weight: 500;
+    color: #262626;
+}
+
+.api-status .badge i {
+    margin-right: 4px;
+    font-size: 0.7rem;
+}
+
+/* Meta Footer */
+.meta-footer {
+    text-align: center;
+    padding: 10px 0;
+    color: #8e8e8e;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* User List Modal */
+.user-list-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+}
+
+.user-list-modal {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    max-width: 800px;
+    width: 100%;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.user-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #dbdbdb;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.user-list-header h3 {
+    color: #262626;
+    font-size: 1.2rem;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #8e8e8e;
+    padding: 0 8px;
+    transition: color 0.2s;
+}
+
+.close-btn:hover {
+    color: #262626;
+}
+
+.current-user-badge {
+    background: #e8f4fd;
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.logout-btn {
+    background: #ed4956;
+    color: white;
+    border: none;
+    padding: 6px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    margin-left: auto;
+    transition: background 0.2s;
+}
+
+.logout-btn:hover {
+    background: #d43b47;
+}
+
+.user-list {
+    margin: 15px 0;
+}
+
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.user-table thead {
+    background: #fafafa;
+    border-bottom: 2px solid #dbdbdb;
+}
+
+.user-table th {
+    text-align: left;
+    padding: 12px 10px;
+    font-weight: 600;
+    color: #262626;
+}
+
+.user-table td {
+    padding: 10px;
+    border-bottom: 1px solid #efefef;
+}
+
+.user-table tr:hover {
+    background: #fafafa;
+}
+
+.user-table .current-user {
+    background: #e8f4fd;
+}
+
+.user-table .current-user:hover {
+    background: #d4e8f7;
+}
+
+.you-badge {
+    color: #0095f6;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.no-users {
+    text-align: center;
+    color: #8e8e8e;
+    padding: 30px 0;
+}
+
+.user-list-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    border-top: 1px solid #efefef;
+    margin-top: 15px;
+}
+
+.user-count {
+    color: #8e8e8e;
+    font-size: 0.85rem;
+}
+
+.refresh-btn {
+    background: #0095f6;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: background 0.2s;
+}
+
+.refresh-btn:hover {
+    background: #1877f2;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .card {
+        padding: 20px 20px;
+        border: none;
+        background: transparent;
+    }
+    
+    body {
+        background: #fff;
+        padding: 10px;
+    }
+    
+    .logo {
+        font-size: 2.4rem;
+    }
+}
