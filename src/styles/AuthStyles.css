@@ -34,21 +34,40 @@ body {
     width: 100%;
 }
 
-/* Instagram Logo */
-.logo {
+/* Logo and Tagline Section - Exact Instagram Style */
+.logo-section {
     text-align: center;
     margin-bottom: 30px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
     font-family: 'Billabong', 'Segoe UI', cursive;
-    font-size: 2.8rem;
+    font-size: 3rem;
     font-weight: 400;
     color: #262626;
     letter-spacing: -2px;
+    margin-bottom: 12px;
 }
 
 .logo i {
     color: #262626;
-    margin-right: 4px;
-    font-size: 2.6rem;
+    font-size: 2.8rem;
+}
+
+.logo span {
+    font-family: 'Billabong', 'Segoe UI', cursive;
+}
+
+.tagline {
+    color: #8e8e8e;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-top: 4px;
 }
 
 /* Form Styles */
@@ -456,5 +475,9 @@ body {
     
     .logo {
         font-size: 2.4rem;
+    }
+    
+    .tagline {
+        font-size: 0.9rem;
     }
 }
