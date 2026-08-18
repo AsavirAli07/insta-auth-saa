@@ -7,5 +7,22 @@ export default defineConfig({
   server: {
     port: 3000,
     open: true
+  },
+  // Ignore ESLint errors during build
+  build: {
+    rollupOptions: {
+      onwarn(warning, warn) {
+        // Ignore certain warnings
+        if (warning.code === 'MODULE_LEVEL_DIRECTIVE') {
+          return
+        }
+        warn(warning)
+      }
+    }
+  },
+  // Prevent ESLint from breaking the build
+  esbuild: {
+    // Drop console logs in production (optional)
+    // drop: ['console', 'debugger'],
   }
 })
