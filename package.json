@@ -8,7 +8,8 @@
     "build": "vite build",
     "build:skip-lint": "vite build --mode production",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "NODE_ENV=production vite build"
   },
   "dependencies": {
     "react": "^18.2.0",
